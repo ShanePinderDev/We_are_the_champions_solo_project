@@ -1,0 +1,94 @@
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #000;
+  color: #fff;
+  user-select: none;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 21.875em;
+  margin: 1.875em auto;
+  text-align: center;
+}
+
+.freddie-img {
+  width: 5.625em;
+  margin: 0.625em auto 0;
+}
+
+.endorsement-input-field,
+.from-to-input-field {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  width: 100%;
+  padding: 0.625em 1.25em;
+  background-color: #444059;
+  color: #8f8f8f;
+  resize: none;
+  text-align: left;
+  border: 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 0.938em;
+}
+
+.endorsement-input-field {
+  height: 7.5em;
+}
+
+.from-to-container {
+  display: flex;
+  gap: 10px;
+}
+
+.from-to-input-field {
+  height: 2.5em;
+}
+
+.publish-button {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.375rem;
+  background-color: #28a9f1;
+  color: #04131c;
+  cursor: pointer;
+  padding: 1.25em 0;
+  border: 0;
+  border-radius: 8px;
+}
+
+.publish-button:hover {
+  background-color: #45ca7f;
+}
+
+.endorsements-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.endorsements {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  background-color: #fff;
+  color: #1b1924;
+  padding: 0.313em 1.25em;
+  text-align: left;
+}
+
+.to-from-text {
+  font-weight: 700;
+}
