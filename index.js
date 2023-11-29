@@ -43,7 +43,7 @@ onValue(endorsementsInDB, function (snapshot) {
       appendItemToEndorsementsContainerEl(currentEndorsement);
     }
   } else {
-    endorsementsContainerEl.innerHTML = `
+    endorsementsContainerEl.textContent = `
     <div class="endorsements" id="endorsements">
     <p class="endorsement-text">"No endorsements here... yet"</p>
     </div>
