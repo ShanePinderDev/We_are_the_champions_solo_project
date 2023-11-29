@@ -21,7 +21,8 @@ const database = getDatabase(app);
 const endorsementsInDB = ref(database, "endorsements");
 
 publishBtnEl.addEventListener("click", function () {
-  let inputValue = inputFieldEl.value;
+  // let inputValue = inputFieldEl.value;
+  let inputValue = sanitizeHTML(inputFieldEl.value);
   let fromInputValue = fromInputFieldEl.value;
   let toInputValue = toInputFieldEl.value;
   push(endorsementsInDB, {
@@ -31,6 +32,12 @@ publishBtnEl.addEventListener("click", function () {
   });
   clearInputFieldEls();
 });
+
+function sanitizeHTML(str) {
+  return str.replace(/javascript:/gi, "").replace(/[^\w-_. ]/gi, function (c) {
+    return `&#${c.charCodeAt(0)};`;
+  });
+}
 
 onValue(endorsementsInDB, function (snapshot) {
   if (snapshot.exists()) {
