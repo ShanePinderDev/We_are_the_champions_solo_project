@@ -52,7 +52,7 @@ onValue(endorsementsInDB, function (snapshot) {
 });
 
 function clearEndorsementsContainerEl() {
-  endorsementsContainerEl.innerHTML = "";
+  endorsementsContainerEl.textContent = "";
 }
 
 function clearInputFieldEls() {
@@ -62,7 +62,7 @@ function clearInputFieldEls() {
 }
 
 function appendItemToEndorsementsContainerEl(itemValue) {
-  endorsementsContainerEl.innerHTML += `
+  endorsementsContainerEl.textContent += `
   <div class="endorsements" id="endorsements">
     <p class="to-from-text">To: ${itemValue.to}</p>
     <p>${itemValue.endorsement}</p>
